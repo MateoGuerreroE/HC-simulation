@@ -22,3 +22,4 @@ const crearClasePersona = require('../06-07-08.js');
       expect(persona.getPromedioEdad()).toBe(29);
     });
   });
+  

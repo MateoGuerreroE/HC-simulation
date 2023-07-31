@@ -14,7 +14,15 @@ function buscarAmigo(amigos, nombre) {
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
   // Tu código aca:
+
+  var newObj = {}
+  for (let i = 0; i < amigos.length ; i++){
+    if (amigos[i].nombre === nombre){
+      newObj = amigos[i];
+    }
+  }
   
+  return newObj;
 }
 
 // No modifiques nada debajo de esta linea //

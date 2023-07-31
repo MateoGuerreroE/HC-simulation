@@ -12,6 +12,15 @@ function soloNumeros(array) {
 
   // Tu código aca:
 
+  var newArray = [];
+  for (let i=0;i<array.length;i++){
+    if (!(isNaN(array[i]))){
+      newArray.push(array[i])
+    }
+  }
+
+  return newArray;
+
 }
 
 // No modifiques nada debajo de esta linea //

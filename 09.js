@@ -4,7 +4,7 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
-function filtrar(funcion) {
+function filtrar() {
   // Escribi una función filtrar en el prototipo de Arrays,
   // que recibe una funcion (callback) que devuelve true o false.
   // filtrar los elementos de ese arreglo en base al resultado de esa funcion
@@ -24,6 +24,20 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
+
+
+  Array.prototype.filtrar = function (cbfunc){
+    
+    var newArray = [];
+    for (let i = 0; i < this.length ; i++){
+      if (cbfunc(this[i]) === true){
+        newArray.push(this[i]);
+      }
+    } 
+    
+    return newArray;
+  }
+
 
 };
 
